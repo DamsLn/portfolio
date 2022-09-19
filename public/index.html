@@ -10,19 +10,19 @@
     <title>Damien Lasson</title>
 </head>
 <body>
-    <header class="md:mx-153 w-100 h-117 bg-white border-b-grey border-b-2 p-10 grid grid-cols-3">
+    <header class="md:mx-153 w-100 lg:h-117 bg-white border-b-grey border-b-2 p-10 grid grid-cols-3">
         <div class="flex justify-start items-center pl-10">
             <h1 class="text-32">Damien</h1>
             <div class="ml-5 h-24 flex justify-center items-end">
                 <div class="w-8 h-8 rounded-full bg-primary"></div>
             </div>
         </div>
-        <div class="sm:hidden md:flex justify-around items-center">
+        <div class="sm:hidden lg:flex justify-around items-center">
             <a class="text-20.8 text-primary hover:underline" href="/home">Home</a>
             <a class="text-20.8 text-primary hover:underline" href="/Skills">Skills</a>
             <a class="text-20.8 text-primary hover:underline" href="/projects">Projects</a>
         </div>
-        <div class="sm:hidden md:flex justify-end items-center pr-20">
+        <div class="sm:hidden lg:flex justify-end items-center pr-20">
             <button class="border-none rounded-lg bg-primary hover:bg-primary-dark transition-colors duration-300 px-20 py-13 text-white flex justify-items-center items-center gap-10">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18">
@@ -34,12 +34,28 @@
                 </span>
             </button>
         </div>
-        <div class="sm:flex md:hidden justify-end items-center pr-20 col-start-2 col-end-4">
-            <button class="border-none rounded-lg bg-primary hover:bg-primary-dark transition-colors duration-300 px-20 py-13 text-white flex justify-items-center items-center gap-10">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+        <div x-data="burgerMenu()" class="sm:flex lg:hidden justify-end items-center pr-20 col-start-2 col-end-4">
+            <button x-show="!status" @click="switchStatus(true)" class="border-none rounded-lg bg-white hover:bg-grey transition-colors duration-300 px-20 py-13 text-white flex justify-items-center items-center gap-10">
+                <svg class="text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>                  
             </button>
+            <button x-show="status" @click="switchStatus(false)" class="border-none rounded-lg bg-white hover:bg-grey transition-colors duration-300 px-20 py-13 text-white flex justify-items-center items-center gap-10">
+                <svg class="text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>                                                    
+            </button>
+            <div x-show="status" @click.away="switchStatus(false)" class="absolute top-60 border-none rounded-lg shadow bg-white p-8">
+                <div class="w-117 px-5 py-8 hover:bg-grey hover:rounded hover:border-none transition-colors duration-300">
+                    <a class="text-16 text-black w-full h-full inline-block text-right" href="/home">Home</a>
+                </div>
+                <div class="w-117 px-5 py-8 hover:bg-grey hover:rounded hover:border-none transition-colors duration-300">
+                    <a class="text-16 text-black w-full h-full inline-block text-right" href="/Skills">Skills</a>
+                </div>
+                <div class="w-117 px-5 py-8 hover:bg-grey hover:rounded hover:border-none transition-colors duration-300">
+                    <a class="text-16 text-black w-full h-full inline-block text-right" href="/projects">Projects</a>
+                </div>
+            </div>
         </div>
     </header>
     <section>

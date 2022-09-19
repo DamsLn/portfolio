@@ -10,7 +10,7 @@ module.exports = {
       'sm': '390px',
       'md': '820px',
       'lg': '1100px',
-      'xl': '1600px',
+      'xl': '1500px',
     },
     fontFamily: {
       'sfPro': ['SF-Pro']
@@ -43,8 +43,13 @@ module.exports = {
       '20': '20px',
       '24': '24px',
       '41': '41px',
+      '60': '60px',
       '117': '117px',
       '153': '153px',
+    },
+    borderWidth: {
+      '1': '1px',
+      '2': '2px',
     }
   },
   plugins: [],
