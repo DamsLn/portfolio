@@ -11,5 +11,5 @@
 
 #modal {
     transform: translateX(3999px);
-    transition: transform 500ms ease-in-out;
+    transition: transform 700ms ease-in-out;
 }

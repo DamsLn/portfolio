@@ -11,7 +11,7 @@ const modal = () => {
                 document.getElementById('modal').style.transform = "translateX(9999px)";
                 window.setTimeout(() => {
                     this.modalStatus = newStatus;
-                }, 500);
+                }, 100);
             }
         }
     }

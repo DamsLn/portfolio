@@ -3041,7 +3041,7 @@ var modal = function modal() {
         document.getElementById('modal').style.transform = "translateX(9999px)";
         window.setTimeout(function () {
           _this.modalStatus = newStatus;
-        }, 500);
+        }, 100);
       }
     }
   };
