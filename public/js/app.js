@@ -2979,10 +2979,13 @@ var module_default = src_default;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
 /* harmony import */ var _modules_burger_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/burger_menu */ "./src/js/modules/burger_menu.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
+
 
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('burgerMenu', _modules_burger_menu__WEBPACK_IMPORTED_MODULE_1__["default"]);
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('modal', _modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 /***/ }),
@@ -2999,14 +3002,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var burgerMenu = function burgerMenu() {
   return {
-    status: false,
-    switchStatus: function switchStatus(newStatus) {
-      this.status = newStatus;
+    burgerMenuStatus: false,
+    switchBurgerMenuStatus: function switchBurgerMenuStatus(newStatus) {
+      this.burgerMenuStatus = newStatus;
     }
   };
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (burgerMenu);
+
+/***/ }),
+
+/***/ "./src/js/modules/modal.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/modal.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var modal = function modal() {
+  return {
+    modalStatus: false,
+    switchModalStatus: function switchModalStatus(newStatus) {
+      this.modalStatus = newStatus;
+    }
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
 
 /***/ }),
 

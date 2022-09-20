@@ -5,9 +5,13 @@ module.exports = {
     './public/js/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '90vh': '90vh',
+      },
+    },
     screens: {
-      'sm': '390px',
+      'sm': '320px',
       'md': '820px',
       'lg': '1100px',
       'xl': '1500px',
@@ -32,6 +36,7 @@ module.exports = {
       'grey': '#F2F3F4',
       'grey-light': '#979A9A',
       'grey-dark': '#AFAFAF',
+      'grey-info': '#5C5C5C',
       'dark-blue': '#34495E',
       'green': '#52BE80',
       'yellow': '#F7DC6F',
@@ -52,6 +57,7 @@ module.exports = {
       '91': '91px',
       '117': '117px',
       '153': '153px',
+      '300': '300px',
     },
     borderWidth: {
       '1': '1px',

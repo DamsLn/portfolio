@@ -1,8 +1,8 @@
 const burgerMenu = () => {
     return {
-        status: false,
-        switchStatus(newStatus) {
-            this.status = newStatus;
+        burgerMenuStatus: false,
+        switchBurgerMenuStatus(newStatus) {
+            this.burgerMenuStatus = newStatus;
         }
     }
 }
