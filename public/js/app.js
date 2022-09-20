@@ -3027,7 +3027,19 @@ var modal = function modal() {
   return {
     modalStatus: false,
     switchModalStatus: function switchModalStatus(newStatus) {
-      this.modalStatus = newStatus;
+      var _this = this;
+
+      if (newStatus) {
+        this.modalStatus = newStatus;
+        window.setTimeout(function () {
+          document.getElementById('modal').style.transform = "translateX(0)";
+        }, 10);
+      } else {
+        document.getElementById('modal').style.transform = "translateX(9999px)";
+        window.setTimeout(function () {
+          _this.modalStatus = newStatus;
+        }, 500);
+      }
     }
   };
 };
