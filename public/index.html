@@ -10,12 +10,14 @@
     <title>Damien Lasson</title>
 </head>
 <body class="flex flex-col h-screen">
-    <header class="md:mx-153 w-100 lg:h-117 bg-white border-b-grey border-b-2 p-10 grid grid-cols-3">
+    <header class="md:mx-153 w-100 bg-white border-b-grey border-b-2 p-20 grid grid-cols-3">
         <div class="flex justify-start items-center pl-10">
-            <h1 class="text-32">Damien</h1>
-            <div class="ml-5 h-24 flex justify-center items-end">
-                <div class="w-8 h-8 rounded-full bg-primary"></div>
-            </div>
+            <a class="flex justify-start items-center hover:scale-110 transition-transform duration-300" href="/home">
+                <h1 class="text-32">Damien</h1>
+                <div class="ml-5 h-24 flex justify-center items-end">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-sky-500 to-primary"></div>
+                </div>
+            </a>
         </div>
         <div class="sm:hidden lg:flex justify-around items-center">
             <a class="text-20.8 text-primary hover:underline" href="/home">Home</a>
@@ -45,7 +47,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>                                                    
             </button>
-            <div x-show="status" @click.away="switchStatus(false)" class="absolute top-60 border-none rounded-lg shadow bg-white p-8">
+            <div x-show="status" @click.away="switchStatus(false)" class="absolute top-70 border-none rounded-lg shadow bg-white p-8">
                 <div class="w-117 px-5 py-8 hover:bg-grey hover:rounded hover:border-none transition-colors duration-300">
                     <a class="text-16 text-black w-full h-full inline-block text-right" href="/home">Home</a>
                 </div>
@@ -58,10 +60,29 @@
             </div>
         </div>
     </header>
-    <section class="flex justify-center items-center flex-grow">
-        <!-- Section -->
+    <section class="flex sm:flex-col lg:flex-row flex-grow ">
+        <div class="md:ml-153 sm:py-60 px-20 lg:py-0 w-100 lg:w-1/2 flex flex-col flex-grow justify-center">
+            <span class="w-fit text-20.8 text-white bg-gradient-to-r from-sky-500 to-primary border-none rounded-full py-12.5 px-25">Web Developer</span>
+            <h2 class="text-40 leading-17 my-25">Hi! I am Damien Lasson</h2>
+            <p class="text-16 mb-20">Junior Web front end developer with a passion <br/> for his job 😎</p>
+            <p class="text-16">📍 Strasbourg, France</p>
+            <p class="text-16">✉️ lasson[dot]damien[at]orange[dot]fr</p>
+        </div>
+        <div class="md:mx-153 lg:mr-153 lg:ml-0 sm:py-60 px-20 lg:py-0 w-100 lg:w-1/2 flex flex-col flex-grow justify-center items-center bg-gradient-to-r from-sky-500 to-primary">
+            <img width="220px" height="auto" src="./img/9179F954-CAE8-42A6-82A6-DC4371451C27_1_201_a 1.png" alt="Damien Lasson memoji">
+            <button class="border-none rounded-lg bg-white hover:bg-grey transition-colors duration-300 px-20 py-13 text-black flex justify-items-center items-center gap-10">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>                                          
+                </span>
+                <span class="text-16">
+                    Get to know me
+                </span>
+            </button>
+        </div>
     </section>
-    <footer class="w-full h-91 bg-dark-blue flex justify-center items-center">
+    <footer class="w-full sm:py-25 h-91 bg-dark-blue flex justify-center items-center">
         <p class="text-white text-16">Developed by <span class="font-bold">Damien Lasson</span></p>
     </footer>
 </body>

@@ -16,7 +16,7 @@ module.exports = {
       'sfPro': ['SF-Pro']
     },
     fontSize: {
-      '68': '68px',
+      '40': '40px',
       '32': '32px',
       '26': '26px',
       '24': '24px',
@@ -24,8 +24,9 @@ module.exports = {
       '16': '16px',
     },
     colors: {
-      'primary': '#7A82AB',
-      'primary-dark': '#616786',
+      'primary': '#6366F1',
+      'primary-dark': '#4338CA',
+      'sky-500': '#0EA5E9',
       'white': '#FFFFFF',
       'black': '#000000',
       'grey': '#F2F3F4',
@@ -36,14 +37,18 @@ module.exports = {
       'yellow': '#F7DC6F',
     },
     spacing: {
+      '0': '0px',
       '5': '5px',
       '8': '8px',
       '10': '10px',
+      '12.5': '12.5px',
       '13': '13px',
       '20': '20px',
       '24': '24px',
+      '25': '25px',
       '41': '41px',
       '60': '60px',
+      '70': '70px',
       '91': '91px',
       '117': '117px',
       '153': '153px',
@@ -51,7 +56,10 @@ module.exports = {
     borderWidth: {
       '1': '1px',
       '2': '2px',
-    }
+    },
+    lineHeight: {
+      '17': '68px',
+    },
   },
   plugins: [],
 }
