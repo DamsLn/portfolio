@@ -2980,12 +2980,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
 /* harmony import */ var _modules_burger_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/burger_menu */ "./src/js/modules/burger_menu.js");
 /* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
+/* harmony import */ var _modules_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/router */ "./src/js/modules/router.js");
+
 
 
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('burgerMenu', _modules_burger_menu__WEBPACK_IMPORTED_MODULE_1__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('modal', _modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"]);
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('router', _modules_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 /***/ }),
@@ -3045,6 +3048,32 @@ var modal = function modal() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
+
+/***/ }),
+
+/***/ "./src/js/modules/router.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/router.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var router = function router() {
+  return {
+    currentRoute: 'homepage',
+    init: function init() {
+      this.route = 'homepage';
+    },
+    setRoute: function setRoute(route) {
+      this.currentRoute = route;
+    }
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
 
 /***/ }),
 
