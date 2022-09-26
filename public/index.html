@@ -21,13 +21,13 @@
                 </a>
             </div>
             <div class="sm:hidden lg:flex justify-around items-center">
-                <a x-show="currentRoute !== 'homepage'" @click.prevent="setRoute('homepage')" class="text-18 text-grey-light hover:text-primary hover:scale-110 transition-transform duration-300" href="">Home</a>
+                <a x-show="currentRoute !== 'homepage'" @click.prevent="setRoute('homepage'); switchModalStatus(false)" class="text-18 text-grey-light hover:text-primary hover:scale-110 transition-transform duration-300" href="">Home</a>
                 <a x-show="currentRoute === 'homepage'" class="text-18 text-primary" href="">Home</a>
 
-                <a x-show="currentRoute !== 'skills'" @click.prevent="setRoute('skills')" class="text-18 text-grey-light hover:text-primary hover:scale-110 transition-transform duration-300" href="">Skills</a>
+                <a x-show="currentRoute !== 'skills'" @click.prevent="setRoute('skills'); switchModalStatus(false)" class="text-18 text-grey-light hover:text-primary hover:scale-110 transition-transform duration-300" href="">Skills</a>
                 <a x-show="currentRoute === 'skills'" class="text-18 text-primary" href="">Skills</a>
 
-                <a x-show="currentRoute !== 'projects'" @click.prevent="setRoute('projects')" class="text-18 text-grey-light hover:text-primary hover:scale-110 transition-transform duration-300" href="">Projects</a>
+                <a x-show="currentRoute !== 'projects'" @click.prevent="setRoute('projects'); switchModalStatus(false)" class="text-18 text-grey-light hover:text-primary hover:scale-110 transition-transform duration-300" href="">Projects</a>
                 <a x-show="currentRoute === 'projects'" class="text-18 text-primary" href="">Projects</a>
             </div>
             <div class="sm:hidden lg:flex justify-end items-center pr-20">
@@ -55,13 +55,13 @@
                 </button>
                 <div x-show="burgerMenuStatus" @click.away="switchBurgerMenuStatus(false)" class="absolute top-70 border-none rounded-lg shadow bg-white p-8">
                     <div class="w-117 px-5 py-8 hover:bg-grey hover:rounded hover:border-none transition-colors duration-300">
-                        <a @click.prevent="setRoute('homepage')"  class="text-16 text-black w-full h-full inline-block text-right" href="">Home</a>
+                        <a @click.prevent="setRoute('homepage'); switchBurgerMenuStatus(false);"  class="text-16 text-black w-full h-full inline-block text-left" href="">Home</a>
                     </div>
                     <div class="w-117 px-5 py-8 hover:bg-grey hover:rounded hover:border-none transition-colors duration-300">
-                        <a @click.prevent="setRoute('skills')" class="text-16 text-black w-full h-full inline-block text-right" href="">Skills</a>
+                        <a @click.prevent="setRoute('skills'); switchBurgerMenuStatus(false);" class="text-16 text-black w-full h-full inline-block text-left" href="">Skills</a>
                     </div>
                     <div class="w-117 px-5 py-8 hover:bg-grey hover:rounded hover:border-none transition-colors duration-300">
-                        <a @click.prevent="setRoute('projects')" class="text-16 text-black w-full h-full inline-block text-right" href="">Projects</a>
+                        <a @click.prevent="setRoute('projects'); switchBurgerMenuStatus(false);" class="text-16 text-black w-full h-full inline-block text-left" href="">Projects</a>
                     </div>
                 </div>
             </div>
@@ -149,39 +149,39 @@
                 <div class="mt-60 px-20 md:px-0 flex flex-col lg:flex-row flex-grow md:pb-20">
                     <div class="md:mx-153 lg:ml-153 lg:mr-0 lg:pr-20 lg:py-0 w-100 sm:2/3 lg:w-1/2 flex flex-col">
                         <div class="text-16 font-semibold text-primary space-y-20 text-right">
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">HTML & CSS</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">HTML & CSS</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-4/5 bg-green rounded-l"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">Sass</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">Sass</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-5/5 bg-green rounded"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">Tailwind CSS</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">Tailwind CSS</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-5/5 bg-green rounded"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">TypeScript</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">TypeScript</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-3/5 bg-yellow rounded-l"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">Alpine.js</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">Alpine.js</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-5/5 bg-green rounded"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">React</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">React</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-4/5 bg-green rounded-l"></div>
                                 </div>
                             </div>
@@ -189,40 +189,40 @@
                     </div>
                     <div class="md:mx-153 lg:mr-153 lg:ml-0 mt-20 lg:mt-0 lg:pl-20 lg:py-0 w-100 lg:w-1/2">
                         <div class="text-16 font-semibold text-primary space-y-20 text-right">
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">Redux</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">Redux</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-4/5 bg-green rounded-l"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">Laravel</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">Laravel</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-3/5 bg-yellow rounded-l"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">SQL</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">SQL</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-3/5 bg-yellow rounded-l"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">Git</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">Git</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-4/5 bg-green rounded-l"></div>
                                 </div>
                             </div>
-                            <div class="flex items-center">
-                                <p class="mr-10 w-20%">Figma</p>
-                                <div class="h-20 w-2/3 md:w-80% bg-grey rounded shadow">
+                            <div class="flex flex-col items-start md:flex-row md:items-center">
+                                <p class="mr-10 mb-10 md:w-20%">Figma</p>
+                                <div class="h-20 w-full md:w-80% bg-grey rounded shadow">
                                     <div class="h-20 w-3/5 bg-yellow rounded-l"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="my-20 md:my-41 lg:mx-153 flex justify-center items-center">
+                <div class="my-60 md:my-41 lg:mx-153 flex justify-center items-center">
                     <a type="button" href="./files/CV_Damien_Lasson.pdf" target="_blank" class="border-none rounded-lg shadow bg-white hover:bg-grey hover:scale-105 transition-all duration-300 px-20 py-13 text-black flex justify-center items-center gap-10">
                         <span>                                      
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18">
