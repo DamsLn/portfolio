@@ -38,9 +38,11 @@ module.exports = {
       'grey-light': '#979A9A',
       'grey-dark': '#AFAFAF',
       'grey-info': '#5C5C5C',
+      'grey-hover': '#E0E3E5',
       'dark-blue': '#34495E',
       'green': '#52BE80',
       'yellow': '#F7DC6F',
+      'transparent': 'transparent',
     },
     spacing: {
       '0': '0px',
@@ -68,6 +70,7 @@ module.exports = {
       '2': '2px',
     },
     lineHeight: {
+      '14': '56px',
       '17': '68px',
     },
   },
